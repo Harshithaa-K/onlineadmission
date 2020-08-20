@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+<body>
+  <h3><b>PARENT REGISTRATION FORM</b></h3>
+  <br/>
+  <div class="container">
+    <div class="row">
+    <form (ngSubmit) = "onSubmit(f)" #f="ngForm" name="myForm">
+    <div class="form-group">   
+    <label for="registeras">Register As:</label>
+     <span class="required">*</span> 
+      <select class="form-control" name="registeras" id="registeras" ngModel name="registeras">
+      <option value="Father">Father</option>
+      <option value="Mother">Mother</option>
+      <option value="Guardian">Gaurdian</option>
+      <option value="Student">Student</option>
+     </select> 
+    </div><br/> 
+  <div class="form-group">
+  <label for="registertype">RegisterType:</label>
+  <span class="required">*</span> 
+    <select class="form-control" id="registertype" ngModel name="registertype">
+    <option value="Mobile">Mobile</option>
+    <option value="Email">Email</option>
+    </select> 
+  </div><br/>
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <span class="required">*</span><br/>
+    <input type="text" class="form-control" id="name"  ngModel name="name" placeholder="Enter your name" width="50">
+    <span ng-show="myForm.name.$touched && myForm.name.$invalid"></span>
+  </div> <br/>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <span class="required">*</span><br/>
+    <input type="text" class="form-control" id="email" ngModel name="email" placeholder="Enter your email-id">
+    <span ng-show="(form.email.$dirty || submitted ) && form.email.$invalid.required"></span>
+   </div><br/>
+  <div class="form-group">
+    <label for="mobile">Contact Number:</label>
+    <span class="required">*</span>
+    <br/>
+    <select class="form-control" id="countrycode" ngModel name="contrycode">
+      <option value="+91">+91</option>
+      <option value="+62">+62</option>
+    </select>
+    <input type="text" class="form-control" id="contactnumber" data-minlength="10" maxlength="10" placeholder="Enter Contact number" ngModel name="contactnumber">
+    <span class="error" ng-show="myForm.contactnumber.$error.required"></span>
+    </div><br/>
+    <button class="button" type="submit" value="submit" [disabled]="!f.valid">Submit</button>
+    <br/><br/>
+    <span style='font-size:20px;'>&#8592;</span>
+    <button onclick="goBack()" class="button1">Back to login</button>
+   </form>
+   </div>
+  </div>
+</body>
+</html>

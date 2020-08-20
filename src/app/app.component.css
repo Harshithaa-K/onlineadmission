@@ -1,0 +1,31 @@
+.button
+{
+    background-color: green;
+    border: none;
+    color:white;
+    padding: 8px 50px;
+    text-align:center;
+    font-size: 16px;
+}
+
+h3 {
+    color: coral;
+}
+.button1
+{
+    color: blue;
+    font-size: 15px;
+    padding: 5px 20px;
+    border: black;
+
+}
+
+
+input[type="text"]
+{
+    color:black;
+}
+.required
+{
+    color:red;
+}
